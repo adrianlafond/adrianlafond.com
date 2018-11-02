@@ -1,5 +1,4 @@
 include: [
   "sub",
-  "sub/index.html",
-  "sub/z01/index.html"
+  "sub/z01"
 ]
