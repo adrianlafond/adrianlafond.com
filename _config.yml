@@ -1,4 +1,4 @@
 include: [
-  "sub",
-  "sub/z01"
+  "x",
+  "x/z01"
 ]
