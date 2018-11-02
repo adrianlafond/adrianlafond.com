@@ -1,1 +1,6 @@
-include: ["sub", "_"]
+include: [
+  "sub",
+  "sub/index.html",
+  "_/index.html",
+  "_/z01/index.html"
+]
