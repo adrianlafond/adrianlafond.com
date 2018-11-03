@@ -20,9 +20,29 @@
   &:hover,
   &:focus {
     background-color:  skyblue;
+    outline: 0;
   }
 
   &:active {
     background-color: red;
+  }
+}
+
+.signature {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin: 16px;
+}
+
+.signature__link {
+  color: skyblue;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    background-color: skyblue;
+    color: white;
+    outline: 0;
   }
 }

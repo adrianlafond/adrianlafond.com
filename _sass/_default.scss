@@ -11,10 +11,10 @@
   &:hover,
   &:focus {
     background-color:  skyblue;
+    outline: 0;
   }
 
   &:active {
     background-color: pink;
-    // outline: 2px solid red;
   }
 }
