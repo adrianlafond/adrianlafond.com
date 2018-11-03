@@ -1,0 +1,18 @@
+---
+layout: default
+css: /css/main-image.css
+js: /js/main-image.js
+---
+
+<div class="main-image">
+  {% if page.href %}
+    <a class="main-image__feature" href="{{ page.href }}"></a>
+  {% else %}
+    <div class="main-image__feature"></div>
+  {% endif %}
+</div>
+<style>
+  .main-image__feature {
+    background-image: url("{{ page.image }}");
+  }
+</style>
