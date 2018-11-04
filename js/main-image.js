@@ -1,11 +1,19 @@
-
 function mainImage() {
   var margin = 20;
   var featureEl = document.querySelector('.main-image__feature');
 
   function onResize() {
-    var size = Math.min(window.innerWidth - margin, window.innerHeight - margin, 800);
-    featureEl.style.width = featureEl.style.height = size + 'px';
+    var width = Math.min(window.innerWidth - margin, imgWidth);
+    var height = Math.min(window.innerHeight - margin, imgHeight);
+    var ratioWidth = width / imgWidth;
+    var ratioHeight = height / imgHeight;
+    if (ratioWidth < ratioHeight) {
+      height = imgHeight * ratioWidth;
+    } else if (ratioWidth > ratioHeight) {
+      width = imgWidth * ratioHeight;
+    }
+    featureEl.style.width = width + 'px';
+    featureEl.style.height = height + 'px';
   }
 
   window.addEventListener('resize', onResize);
