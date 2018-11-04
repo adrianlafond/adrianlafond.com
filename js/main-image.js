@@ -1,3 +1,5 @@
+"use strict";
+
 function mainImage() {
   var margin = 20;
   var featureEl = document.querySelector('.main-image__feature');
@@ -7,16 +9,19 @@ function mainImage() {
     var height = Math.min(window.innerHeight - margin, imgHeight);
     var ratioWidth = width / imgWidth;
     var ratioHeight = height / imgHeight;
+
     if (ratioWidth < ratioHeight) {
       height = imgHeight * ratioWidth;
     } else if (ratioWidth > ratioHeight) {
       width = imgWidth * ratioHeight;
     }
-    featureEl.style.width = width + 'px';
-    featureEl.style.height = height + 'px';
+
+    featureEl.style.width = "".concat(width, "px");
+    featureEl.style.height = "".concat(height, "px");
   }
 
   window.addEventListener('resize', onResize);
   onResize();
 }
+
 mainImage();
