@@ -1,0 +1,25 @@
+{
+  "name": "adrianlafond.com",
+  "version": "1.0.0",
+  "description": "adrian's website",
+  "main": "index.html",
+  "scripts": {
+    "test": "jekyll serve",
+    "babel": "babel es --out-dir js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adrianlafond/adrianlafond.com.git"
+  },
+  "author": "Adrian Lafond",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/adrianlafond/adrianlafond.com/issues"
+  },
+  "homepage": "https://github.com/adrianlafond/adrianlafond.com#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0"
+  }
+}
