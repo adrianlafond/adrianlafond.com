@@ -5,3 +5,5 @@ url: "https://adrianlafond.com"
 
 sass:
   sass_dir: _sass
+
+exclude: [node_modules,webpack,_javascript]

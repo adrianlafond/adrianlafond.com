@@ -23,4 +23,5 @@ function mainImage() {
   window.addEventListener('resize', onResize);
   onResize();
 }
+
 mainImage();
