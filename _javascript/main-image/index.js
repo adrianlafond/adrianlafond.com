@@ -1,8 +1,12 @@
+/**
+ * Intended for use with layout main-image.html.
+ */
 function mainImage() {
   const margin = 20;
   const featureEl = document.querySelector('.main-image__feature');
 
   function onResize() {
+    // imgWidth and imgHeight must be defined by layout.
     let width = Math.min(window.innerWidth - margin, imgWidth);
     let height = Math.min(window.innerHeight - margin, imgHeight);
     const ratioWidth = width / imgWidth;
