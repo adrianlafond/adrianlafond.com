@@ -3,7 +3,10 @@ layout: default
 css: /css/main-interactive
 ---
 <div class="main-interactive">
-  <div class="main-interactive_feature">
+  <div class="main-interactive__feature">
     {{ content }}
   </div>
 </div>
+{% for src in page.interactive_src %}
+<script src="{{ src }}.js"></script>
+{% endfor %}

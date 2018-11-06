@@ -1,6 +1,12 @@
 ---
 layout: main-interactive
+interactive_src: [
+  'https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.7.1/pixi.min',
+  '/js/b/1/index'
+]
+bootstrap: index
 ---
-BUG
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.7.1/pixi.min.js"></script>
-<script src="/js/b/1/index.js"></script>
+<div class="interactive-b1"></div>
+<script>
+  window.BOOTSTRAP_SELECTOR = '.interactive-b1';
+</script>
