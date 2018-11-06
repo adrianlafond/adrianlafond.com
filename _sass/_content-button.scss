@@ -1,0 +1,18 @@
+.content-button {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  background-color: blue;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color:  skyblue;
+    outline: 0;
+  }
+
+  &:active {
+    background-color: red;
+  }
+}
