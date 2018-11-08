@@ -1,3 +1,5 @@
+import Legs from './legs';
+
 /**
  *
  */
