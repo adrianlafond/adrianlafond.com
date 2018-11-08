@@ -12,7 +12,8 @@
     "webpack:dev": "webpack --config webpack/config.dev",
     "webpack:watch": "npm run del:dev && npm run webpack:dev && webpack --config webpack/config.dev --watch",
     "serve:live": "live-server _site --ignore \"node_modules,_site/node_modules\" --watch \"_site\" --no-browser",
-    "jekyll:serve": "jekyll serve"
+    "jekyll:serve": "jekyll serve",
+    "test:watch": "jest --watch"
   },
   "repository": {
     "type": "git",

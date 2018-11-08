@@ -18,6 +18,9 @@ describe('Bug', () => {
     it('sets default angle', () => {
       expect(bug.angle).toBe(defaults.angle);
     });
+    it('instantiates Segments', () => {
+      expect(bug.segments instanceof Segments).toBe(true);
+    });
   });
 
   describe('root options', () => {
@@ -48,6 +51,16 @@ describe('Bug', () => {
       const ticks = bug.ticks;
       bug.tick();
       expect(bug.ticks).toBe(ticks + 1);
+    });
+  });
+
+  describe('data', () => {
+    it('is an object', () => {
+      expect(typeof bug.data).toEqual('object');
+    });
+    it('is read-only', () => {
+      bug.data.foo = 'bar';
+      expect(bug.data.foo).toBeUndefined();
     });
   });
 });

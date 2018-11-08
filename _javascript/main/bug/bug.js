@@ -7,6 +7,10 @@ class Bug extends Base {
     super(options);
   }
 
+  get data() {
+    return {};
+  }
+
   initialize() {
     this.initializePosition();
     this.initializeSegments();
