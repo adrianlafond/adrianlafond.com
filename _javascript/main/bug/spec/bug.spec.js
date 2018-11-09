@@ -1,5 +1,4 @@
 const Bug = require('../bug').default;
-const Segments = require('../segments').default;
 const defaults = require('../defaults.json');
 
 describe('Bug', () => {
@@ -18,12 +17,9 @@ describe('Bug', () => {
     it('sets default angle', () => {
       expect(bug.angle).toBe(defaults.angle);
     });
-    it('instantiates Segments', () => {
-      expect(bug.segments instanceof Segments).toBe(true);
-    });
   });
 
-  describe('root options', () => {
+  describe('initialization options', () => {
     const options = {
       x: 10,
       y: 20,
@@ -43,25 +39,29 @@ describe('Bug', () => {
     });
   });
 
-  describe('initialization', () => {
-    it('instantiates Segments', () => {
-      expect(bug.segments instanceof Segments).toBe(true);
+  describe('read-only value', () => {
+    beforeEach(() => {
+      bug = new Bug();
     });
-    it('increments ticks on tick()', () => {
+    it('cannot set x', () => {
+      expect(() => { bug.x = 999 }).toThrow();
+    });
+    it('cannot set y', () => {
+      expect(() => { bug.y = 999 }).toThrow();
+    });
+    it('cannot set angle', () => {
+      expect(() => { bug.angle = 999 }).toThrow();
+    });
+    it('cannot set ticks', () => {
+      expect(() => { bug.ticks = 999 }).toThrow();
+    });
+  });
+
+  describe('tick()', () => {
+    it('increments ticks', () => {
       const ticks = bug.ticks;
       bug.tick();
       expect(bug.ticks).toBe(ticks + 1);
     });
   });
-
-  describe('data', () => {
-    it('is an object', () => {
-      expect(typeof bug.data).toEqual('object');
-    });
-    it('is read-only', () => {
-      bug.data.foo = 'bar';
-      expect(bug.data.foo).toBeUndefined();
-    });
-  });
 });
-

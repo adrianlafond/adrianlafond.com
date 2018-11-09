@@ -2,33 +2,44 @@ import Base from './base';
 import defaults from './defaults.json';
 import Segments from './segments';
 
-class Bug extends Base {
+const bugs = new WeakMap();
+
+function initialize(instance, options = {}) {
+  bugs.set(instance, {
+    options,
+    x: Base.option(options, 'x', defaults.x),
+    y: Base.option(options, 'y', defaults.y),
+    angle: Base.option(options, 'angle', defaults.angle),
+    segments: new Segments(options),
+    ticks: 0,
+  });
+}
+
+class Bug {
   constructor(options) {
-    super(options);
+    initialize(this, options);
   }
 
-  get data() {
-    return {};
+  get x() {
+    return bugs.get(this).x;
   }
 
-  initialize() {
-    this.initializePosition();
-    this.initializeSegments();
+  get y() {
+    return bugs.get(this).y;
   }
 
-  initializePosition() {
-    this.ticks = 0;
-    this.x = this.option('x', defaults.x);
-    this.y = this.option('y', defaults.y);
-    this.angle = this.option('angle', defaults.angle);
+  get angle() {
+    return bugs.get(this).angle;
   }
 
-  initializeSegments() {
-    this.segments = new Segments(this.options);
+  get ticks() {
+    return bugs.get(this).ticks;
   }
 
   tick() {
-    this.ticks++;
+    const data = bugs.get(this);
+    data.ticks += 1;
+    bugs.set(this, data);
   }
 }
 

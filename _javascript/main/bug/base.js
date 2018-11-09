@@ -7,6 +7,10 @@ class Base {
     this.initialize();
   }
 
+  static option(options, key, defaultValue) {
+    return options.hasOwnProperty(key) ? options[key] : defaultValue;
+  }
+
   initialize() {
     //
   }
