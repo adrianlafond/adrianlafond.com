@@ -8,15 +8,14 @@ class B1 {
   }
 
   init() {
-    this.bug = new Bug();
+    this.tick = null;
+    this.bug = new Bug({ x: 100, y: 100 });
     this.createApp();
-    this.drawShapes();
-    this.addTick();
+    this.createBug();
+    this.startTick();
   }
 
   createApp() {
-    const renderType = PIXI.utils.isWebGLSupported() ? 'WebGL' : 'canvas';
-    PIXI.utils.sayHello(renderType);
     this.app = new PIXI.Application({
       width: 320,
       height: 320,
@@ -28,38 +27,34 @@ class B1 {
     this.hostElement.appendChild(this.app.view);
   }
 
-  drawShapes() {
-    const circle = new PIXI.Graphics();
-    circle.beginFill(0x000000);
-    circle.drawCircle(0, 0, 3);
-    circle.endFill();
-    circle.x = 160;
-    circle.y = 160;
-    this.app.stage.addChild(circle);
-    this.circle = circle;
+  startTick() {
+    if (!this.tick) {
+      this.tick = delta => { this.onTick(delta); };
+      this.app.ticker.add(this.tick);
+    }
   }
 
-  addTick() {
-    this.ticking = false;
-    const tickFn = delta => { this.onTick(delta); }
-    this.hostElement.addEventListener('mousedown', () => {
-      if (!this.ticking) {
-        this.app.ticker.add(tickFn);
-      } else {
-        this.app.ticker.remove(tickFn);
-      }
-      this.ticking = !this.ticking;
-    });
+  stopTick() {
+    if (this.tick) {
+      this.app.ticker.remove(this.tick);
+      this.tick = null;
+    }
   }
 
   onTick(delta) {
-    const ranInt = (px) => {
-      const r = Math.random() * 2;
-      const n = r < 1 ? -delta : delta;
-      return Math.max(0, Math.min(320, px + n));
-    }
-    this.circle.x = ranInt(this.circle.x);
-    this.circle.y = ranInt(this.circle.y);
+    this.bug.tick();
+    this.body.x = this.bug.x;
+    this.body.y = this.bug.y;
+  }
+
+  createBug() {
+    this.body = new PIXI.Graphics();
+    this.body.beginFill(0x000000);
+    this.body.drawCircle(0, 0, 10);
+    this.body.endFill();
+    this.body.x = this.bug.x;
+    this.body.y = this.bug.y;
+    this.app.stage.addChild(this.body);
   }
 }
 

@@ -1,5 +1,5 @@
 import Base from './base';
-import defaults from './defaults.json';
+import { root } from './defaults';
 import Segments from './segments';
 
 const bugs = new WeakMap();
@@ -7,9 +7,9 @@ const bugs = new WeakMap();
 function initialize(instance, options = {}) {
   bugs.set(instance, {
     options,
-    x: Base.option(options, 'x', defaults.x),
-    y: Base.option(options, 'y', defaults.y),
-    angle: Base.option(options, 'angle', defaults.angle),
+    x: Base.option(options, 'x', root.x),
+    y: Base.option(options, 'y', root.y),
+    angle: Base.option(options, 'angle', root.angle),
     segments: new Segments(options),
     ticks: 0,
   });
@@ -30,6 +30,10 @@ class Bug {
 
   get angle() {
     return bugs.get(this).angle;
+  }
+
+  get segments() {
+    return bugs.get(this).segments.data;
   }
 
   get ticks() {

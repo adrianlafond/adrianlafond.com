@@ -5,15 +5,15 @@
   "main": "index.html",
   "scripts": {
     "test": "jest --coverage",
-    "start": "npm run del:dev && concurrently \"npm run webpack:watch\" \"npm run jekyll:serve\" \"npm run serve:live\"",
+    "start": "npm run del:dev && npm run webpack:dev && concurrently \"npm run webpack:watch\" \"npm run jekyll:serve\" \"npm run serve:live\"",
     "build": "npm run del:prod && webpack --config webpack/config.prod",
     "del:prod": "del ./js/*",
     "del:dev": "del ./_site/js/*",
     "webpack:dev": "webpack --config webpack/config.dev",
-    "webpack:watch": "npm run del:dev && npm run webpack:dev && webpack --config webpack/config.dev --watch",
+    "webpack:watch": "webpack --config webpack/config.dev --watch",
     "serve:live": "live-server _site --ignore \"node_modules,_site/node_modules\" --watch \"_site\" --no-browser",
     "jekyll:serve": "jekyll serve",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch --debug"
   },
   "repository": {
     "type": "git",

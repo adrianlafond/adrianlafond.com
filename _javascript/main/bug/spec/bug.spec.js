@@ -1,5 +1,5 @@
 const Bug = require('../bug').default;
-const defaults = require('../defaults.json');
+const { root, segment } = require('../defaults');
 
 describe('Bug', () => {
   let bug;
@@ -9,13 +9,19 @@ describe('Bug', () => {
       bug = new Bug();
     });
     it('sets default x', () => {
-      expect(bug.x).toBe(defaults.x);
+      expect(bug.x).toBe(root.x);
     });
     it('sets default y', () => {
-      expect(bug.y).toBe(defaults.y);
+      expect(bug.y).toBe(root.y);
     });
     it('sets default angle', () => {
-      expect(bug.angle).toBe(defaults.angle);
+      expect(bug.angle).toBe(root.angle);
+    });
+    it('creates one segment', () => {
+      expect(bug.segments.length).toBe(1);
+    });
+    it(`creates a segment named "${segment.name}"`, () => {
+      expect(bug.segments[0].name).toBe(segment.name);
     });
   });
 
