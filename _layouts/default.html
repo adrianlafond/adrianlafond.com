@@ -6,6 +6,10 @@
 {{ content }}
 
 {% include footer.html %}
-{% include site-nav.html %}
+{% if page.home %}{% else %}{% include site-nav.html %}{% endif %}
+
+<p class="signature">
+  <a href="mailto:{{ site.email }}?subject=website" class="signature__link">{{ site.email }}</a>
+</p>
 </body>
 </html>
