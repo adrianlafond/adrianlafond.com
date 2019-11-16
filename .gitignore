@@ -3,3 +3,4 @@ _archive/
 _site/
 .sass-cache/
 coverage/
+.jekyll-cache/
