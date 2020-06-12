@@ -1,0 +1,56 @@
+html {
+  font-size: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: black;
+  background-color: white;
+}
+
+.main {
+  margin: 2rem;
+  max-width: 30rem;
+  font-family: monospace;
+  font-size: 1.125rem;
+  line-height: 1.6;
+
+  h1,
+  h2 {
+    text-align: center;
+  }
+
+  p {
+    text-indent: 2rem;
+    margin: 0;
+  }
+
+  .divider {
+    width: 100%;
+    display: block;
+    margin: 1rem 0;
+    text-align: center;
+    &::before {
+      content: '*';
+    }
+  }
+
+  .mdash {
+    white-space: nowrap;
+
+    &--mono {
+      &::before {
+        content: '--';
+      }
+    }
+  }
+
+  pre {
+    margin-left: 2rem;
+    font-style: italic;
+  }
+}
+
