@@ -2,6 +2,14 @@ html {
   font-size: 100%;
 }
 
+.text-box {
+  font-family: monospace;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin: 2rem auto;
+  max-width: 36rem;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -9,14 +17,12 @@ html {
 body {
   color: black;
   background-color: white;
+  text-align: center;
 }
 
 .main {
-  margin: 2rem;
-  max-width: 30rem;
-  font-family: monospace;
-  font-size: 1.125rem;
-  line-height: 1.6;
+  @extend .text-box;
+  text-align: left;
 
   h1,
   h2 {
@@ -54,3 +60,14 @@ body {
   }
 }
 
+.links {
+  @extend .text-box;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2rem 0;
+
+  a {
+    text-decoration: none;
+  }
+}

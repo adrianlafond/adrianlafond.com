@@ -18,5 +18,20 @@
     {{ content }}
   </div>
 
+  <div class="links">
+    {% if page.prev %}
+    <a href="{{ page.prev }}">&laquo; prev</a>
+    {% else %}
+    <span>-</span>
+    {% endif %}
+
+    <a href="mailto:{{ site.email }}?subject={{ page.subject }}">{{ site.email }}</a>
+
+    {% if page.next %}
+    <a href="{{ page.next }}">next &raquo;</a>
+    {% else %}
+    <span>-</span>
+    {% endif %}
+  </div>
 </body>
 </html>
