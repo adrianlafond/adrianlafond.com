@@ -4,7 +4,7 @@
   "description": "adrian's website",
   "main": "index.html",
   "scripts": {
-    "test": "jekyll serve",
+    "serve": "jekyll serve",
     "babel": "babel es --out-dir js"
   },
   "repository": {
