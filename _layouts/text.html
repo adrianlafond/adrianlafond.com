@@ -15,6 +15,14 @@
 <body>
 
   <div class="main">
+    {% if page.title %}
+    <h1>{{ page.title }}</h1>
+    {% endif %}
+
+    {% if page.chapter %}
+    <h2>{{ page.chapter }}</h2>
+    {% endif %}
+
     {{ content }}
   </div>
 

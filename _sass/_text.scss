@@ -28,10 +28,21 @@ body {
   h2 {
     text-align: center;
   }
+  h2.end {
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: normal;
+    margin-top: 4rem;
+  }
 
   p {
     text-indent: 2rem;
     margin: 0;
+  }
+
+  blockquote {
+    font-style: italic;
+    margin-left: 0;
   }
 
   .divider {
@@ -46,11 +57,8 @@ body {
 
   .mdash {
     white-space: nowrap;
-
-    &--mono {
-      &::before {
-        content: '--';
-      }
+    &::before {
+      content: '--';
     }
   }
 
