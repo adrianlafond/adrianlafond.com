@@ -1,0 +1,21 @@
+---
+layout: default
+css: /css/main-image.css
+js: /js/main-image.js
+---
+<style>
+  .main-image__feature {
+    background-image: url("{{ page.image }}");
+  }
+</style>
+<div class="main-image">
+  {% if page.href %}
+    <a class="main-image__feature" href="{{ page.href }}" title="next"></a>
+  {% else %}
+    <div class="main-image__feature"></div>
+  {% endif %}
+</div>
+<script>
+  var imgWidth = {% if page.imagewidth %}{{ page.imagewidth }}{% else %}800{% endif %};
+  var imgHeight = {% if page.imageheight %}{{ page.imageheight }}{% else %}800{% endif %};
+</script>

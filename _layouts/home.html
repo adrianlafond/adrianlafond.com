@@ -1,0 +1,18 @@
+---
+css: /css/home.css
+js: null
+---
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+<body>
+
+<div class="main">
+  {{ content }}
+</div>
+
+<p class="signature">
+  <a href="mailto:{{ site.email }}?subject=website" class="signature__link">{{ site.email }}</a>
+</p>
+</body>
+</html>

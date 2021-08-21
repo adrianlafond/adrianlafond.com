@@ -1,0 +1,34 @@
+---
+---
+
+.main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-button {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  background-color: blue;
+  cursor: pointer;
+  margin: 4px;
+
+  &:visited {
+    background-color: purple;
+  }
+
+  &:hover,
+  &:focus {
+    background-color:  skyblue;
+    outline: 0;
+  }
+
+  &:active {
+    background-color: red;
+  }
+}
