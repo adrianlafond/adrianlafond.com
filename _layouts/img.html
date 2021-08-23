@@ -18,35 +18,7 @@
       <img class="img" src="{{ img.src }}" alt="{{ img.alt }}">
       {% endfor %}
 
-      {% assign imgs = site.posts | where: "category", "img" %}
-      {% assign prevPost = nil %}
-      {% assign nextPost = nul %}
-
-      {% assign found = false %}
-      {% for post in imgs %}
-        {% if found %}
-          {% assign prevPost = post %}
-          {% break %}
-        {% elsif post.id == page.id %}
-          {% assign found = true %}
-        {% else %}
-          {% assign nextPost = post %}
-        {% endif %}
-      {% endfor %}
-
-      <div class="post__nav">
-        {% if prevPost %}
-        <a href="{{ prevPost.url }}">{{ prevPost.title }}</a>
-        {% else %}
-        <span>&diams;</span>
-        {% endif %}
-
-        {% if nextPost %}
-        <a href="{{ nextPost.url }}">{{ nextPost.title }}</a>
-        {% else %}
-        <span>&diams;</span>
-        {% endif %}
-      </div>
+      {% include post-nav.html %}
     </div>
   </section>
 

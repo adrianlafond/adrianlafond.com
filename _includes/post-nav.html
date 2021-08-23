@@ -1,0 +1,29 @@
+{% assign posts = site.posts | where: "category", page.category %}
+{% assign prevPost = nil %}
+{% assign nextPost = nul %}
+
+{% assign found = false %}
+{% for post in posts %}
+{% if found %}
+{% assign prevPost = post %}
+{% break %}
+{% elsif post.id == page.id %}
+{% assign found = true %}
+{% else %}
+{% assign nextPost = post %}
+{% endif %}
+{% endfor %}
+
+<div class="post__nav">
+  {% if prevPost %}
+  <a href="{{ prevPost.url }}">{{ prevPost.title }}</a>
+  {% else %}
+  <span>&diams;</span>
+  {% endif %}
+
+  {% if nextPost %}
+  <a href="{{ nextPost.url }}">{{ nextPost.title }}</a>
+  {% else %}
+  <span>&diams;</span>
+  {% endif %}
+</div>
