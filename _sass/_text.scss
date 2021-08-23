@@ -30,14 +30,18 @@ p {
 }
 
 a {
-  color: steelblue;
+  color: gold;
   text-decoration: none;
 
   &:hover,
   &:focus {
-    background-color: steelblue;
+    background-color: gold;
     color: white;
     outline: 0;
+  }
+
+  a:visited {
+    color: orange;
   }
 }
 
