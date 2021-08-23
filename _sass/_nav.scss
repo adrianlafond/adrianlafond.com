@@ -1,0 +1,36 @@
+.nav {
+  width: 100%;
+  font-size: 1.6rem;
+  padding: 1.6rem;
+  border-style: solid;
+  border-color: lightslategray;
+
+  &--top {
+    text-align: left;
+    border-width: 0 0 1px;
+  }
+  &--bottom {
+    text-align: right;
+    border-width: 1px 0 0;
+  }
+
+  &__text {
+    margin: 0;
+  }
+
+  &__link {
+    color: steelblue;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      background-color: steelblue;
+      color: white;
+      outline: 0;
+    }
+  }
+
+  &__sig {
+    white-space: nowrap;
+  }
+}

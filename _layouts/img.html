@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+
+<body>
+  <div class="nav nav--top">
+    {% include nav.html %}
+  </div>
+
+  <section class="post">
+    <div class="post__content">
+
+      <h1 class="post__title">{{page.title}}</h1>
+
+      {% for img in page.img %}
+        <img class="img" src="{{ img.src }}" alt="{{ img.alt }}">
+      {% endfor %}
+
+    </div>
+  </section>
+
+  <div class="nav nav--bottom">
+    {% include nav.html %}
+  </div>
+</body>
+</html>
+

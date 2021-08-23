@@ -1,0 +1,11 @@
+.img {
+  border: 1px solid lightslategray;
+  width: 100%;
+  max-width: 640px;
+  max-height: 640px;
+  margin: 1.6rem 0 0;
+
+  &:first-of-type {
+    margin: 0;
+  }
+}

@@ -1,0 +1,6 @@
+---
+layout: none
+---
+
+{% assign img_posts = site.posts | where: "category", "img" %}
+{{ img_posts.first }}

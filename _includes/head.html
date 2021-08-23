@@ -5,8 +5,8 @@
 
   <title>{{ site.title }} {{ page.url }}</title>
 
-  <link rel="stylesheet" type="text/css" href="/css/main.css" />
-  {% if layout.css %}
-  <link rel="stylesheet" type="text/css" href="{{ layout.css }}" />
+  <link rel="stylesheet" type="text/css" href="/css/global.css" />
+  {% if page.category == "img" %}
+  <link rel="stylesheet" type="text/css" href="/css/img.css" />
   {% endif %}
 </head>
