@@ -4,8 +4,6 @@ title: "example note"
 category: "note"
 ---
 
-# example note
-
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel quam orci. Nam sed orci felis. Aliquam non lorem eget magna egestas convallis. Nunc luctus eget tellus quis finibus. Ut faucibus malesuada tellus, vel ultrices ligula lobortis at. Mauris magna urna, sollicitudin eget magna vitae, elementum pulvinar metus. Praesent urna nunc, tristique vel nibh quis, feugiat lacinia mauris. Etiam ullamcorper semper nisi, non interdum tortor commodo vel. Integer accumsan consequat sem, sed condimentum elit euismod vel. Vivamus in posuere ex. Integer ac laoreet nisl. Vestibulum interdum pretium sapien sit amet mattis. Nunc luctus vitae nulla ac elementum. Vivamus ipsum dolor, porta at lacinia eu, faucibus in ante. Maecenas ut lorem sollicitudin, efficitur tellus ac, aliquet justo. Duis vitae tempor sem.
 
 Curabitur at sagittis est, eu tempor orci. Ut vehicula metus massa, quis bibendum ipsum volutpat vel. Maecenas hendrerit, arcu non rutrum laoreet, dolor velit porta massa, at molestie justo diam id lacus. Cras pharetra vulputate arcu vel pellentesque. In eleifend faucibus porttitor. Pellentesque eget tincidunt justo, et ultricies nulla. Nam tortor nisi, euismod eget gravida ac, dignissim ac lectus. Nam congue purus et posuere laoreet. Nam porttitor iaculis nulla in lacinia. Nulla non laoreet diam. Proin lacinia laoreet odio, et facilisis arcu cursus pellentesque. Suspendisse quis consequat velit.
