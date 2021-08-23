@@ -16,14 +16,14 @@
 
 <div class="post__nav">
   {% if prevPost %}
-  <a href="{{ prevPost.url }}">{{ prevPost.title }}</a>
+  <a href="{{ prevPost.url }}">&#9666; {{ prevPost.title }}</a>
   {% else %}
-  <span>&diams;</span>
+  <span>&#9675;</span>
   {% endif %}
 
   {% if nextPost %}
-  <a href="{{ nextPost.url }}">{{ nextPost.title }}</a>
+  <a href="{{ nextPost.url }}">{{ nextPost.title }} &#9656;</a>
   {% else %}
-  <span>&diams;</span>
+  <span>&#9675;</span>
   {% endif %}
 </div>
