@@ -1,6 +1,17 @@
 ---
+layout: "note"
 title: "example note"
 category: "note"
 ---
 
-## {{page.title}}
+# example note
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel quam orci. Nam sed orci felis. Aliquam non lorem eget magna egestas convallis. Nunc luctus eget tellus quis finibus. Ut faucibus malesuada tellus, vel ultrices ligula lobortis at. Mauris magna urna, sollicitudin eget magna vitae, elementum pulvinar metus. Praesent urna nunc, tristique vel nibh quis, feugiat lacinia mauris. Etiam ullamcorper semper nisi, non interdum tortor commodo vel. Integer accumsan consequat sem, sed condimentum elit euismod vel. Vivamus in posuere ex. Integer ac laoreet nisl. Vestibulum interdum pretium sapien sit amet mattis. Nunc luctus vitae nulla ac elementum. Vivamus ipsum dolor, porta at lacinia eu, faucibus in ante. Maecenas ut lorem sollicitudin, efficitur tellus ac, aliquet justo. Duis vitae tempor sem.
+
+Curabitur at sagittis est, eu tempor orci. Ut vehicula metus massa, quis bibendum ipsum volutpat vel. Maecenas hendrerit, arcu non rutrum laoreet, dolor velit porta massa, at molestie justo diam id lacus. Cras pharetra vulputate arcu vel pellentesque. In eleifend faucibus porttitor. Pellentesque eget tincidunt justo, et ultricies nulla. Nam tortor nisi, euismod eget gravida ac, dignissim ac lectus. Nam congue purus et posuere laoreet. Nam porttitor iaculis nulla in lacinia. Nulla non laoreet diam. Proin lacinia laoreet odio, et facilisis arcu cursus pellentesque. Suspendisse quis consequat velit.
+
+Etiam rutrum posuere erat, a feugiat sapien interdum vitae. Sed sed ipsum odio. Suspendisse potenti. Vivamus ut scelerisque augue. Cras lobortis neque sit amet dolor ullamcorper, at tempus erat finibus. Maecenas gravida odio et laoreet tempus. Donec quis enim pharetra, pharetra ipsum a, fermentum sapien. Donec risus velit, tristique at ligula sed, tincidunt malesuada nunc. Ut rhoncus massa eget nisi tristique volutpat.
+
+Vestibulum iaculis ipsum ut ultricies maximus. Nulla faucibus nec nulla vel pulvinar. Fusce quis velit a odio suscipit sodales at non libero. Duis dictum sem maximus ante posuere venenatis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In auctor risus non aliquet ultrices. Maecenas eget convallis augue.
+
+Proin rutrum risus facilisis, porttitor nunc quis, feugiat est. Praesent risus turpis, fringilla ut magna id, fringilla interdum est. Ut non est velit. Vestibulum maximus lorem vel neque pharetra pellentesque. Curabitur in sagittis libero. Ut accumsan faucibus arcu a commodo. Cras accumsan nisl id dapibus viverra. Aenean lacinia a lectus non fringilla. Nunc dui ligula, blandit nec neque eget, auctor euismod neque. Donec sit amet enim efficitur quam malesuada tempus a eget turpis. Nunc orci ante, fermentum vitae mauris vel, sagittis pretium libero. Donec quis euismod arcu, eget rutrum magna.

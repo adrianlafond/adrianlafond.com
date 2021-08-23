@@ -1,3 +1,6 @@
 ---
-layout: note
+layout: none
 ---
+
+{% assign posts = site.posts | where: "category", "note" %}
+{{ posts.first }}

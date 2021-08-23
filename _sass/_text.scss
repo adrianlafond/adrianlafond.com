@@ -1,4 +1,5 @@
 h1, h2, h3, h4, h5, h6 {
+  font-family: $sans-serif;
   font-weight: normal;
   margin: 0 0 3.2rem;
 }
@@ -20,7 +21,12 @@ ul {
 }
 
 li, p, blockquote {
-  font-size: 1.6rem;
+  font-family: $serif;
+  font-size: 2.0rem;
+}
+
+p {
+  line-height: 1.8;
 }
 
 a {
@@ -33,4 +39,8 @@ a {
     color: white;
     outline: 0;
   }
+}
+
+code {
+  font-family: $monospace;
 }

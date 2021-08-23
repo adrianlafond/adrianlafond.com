@@ -4,6 +4,7 @@
   padding: 1.6rem;
   border-style: solid;
   border-color: lightslategray;
+  font-family: $sans-serif;
 
   &--top {
     text-align: left;
@@ -15,10 +16,16 @@
   }
 
   &__text {
+    font-size: 1.6rem;
     margin: 0;
   }
 
   &__sig {
     white-space: nowrap;
+  }
+
+  &__text,
+  a {
+    font-family: $sans-serif;
   }
 }

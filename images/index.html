@@ -2,5 +2,5 @@
 layout: none
 ---
 
-{% assign img_posts = site.posts | where: "category", "img" %}
-{{ img_posts.first }}
+{% assign posts = site.posts | where: "category", "img" %}
+{{ posts.first }}
