@@ -1,3 +1,36 @@
-h1 {
+h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
+  margin: 0 0 3.2rem;
+}
+
+h1 {
+  font-size: 3.2rem;
+}
+h2 {
+  font-size: 2.4rem;
+}
+h3 {
+  font-size: 2.0rem;
+}
+
+ul {
+  margin: 0 0 3.2rem;
+  padding: 0;
+  list-style-type: none;
+}
+
+li, p, blockquote {
+  font-size: 1.6rem;
+}
+
+a {
+  color: steelblue;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    background-color: steelblue;
+    color: white;
+    outline: 0;
+  }
 }

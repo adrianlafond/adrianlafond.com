@@ -18,18 +18,6 @@
     margin: 0;
   }
 
-  &__link {
-    color: steelblue;
-    text-decoration: none;
-
-    &:hover,
-    &:focus {
-      background-color: steelblue;
-      color: white;
-      outline: 0;
-    }
-  }
-
   &__sig {
     white-space: nowrap;
   }
