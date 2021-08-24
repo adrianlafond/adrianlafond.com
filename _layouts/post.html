@@ -3,15 +3,19 @@
 {% include head.html %}
 
 <body>
-  <nav class="nav nav--top">
-    {% include nav.html %}
-  </nav>
+  <a href="#main" class="skip-to-content">skip to content</a>
 
-  <section class="post">
-    <div class="post__content">
+  <header>
+    <nav class="nav nav--top">
+      {% include nav.html %}
+    </nav>
+  </header>
+
+  <main id="main" class="post">
+    <article class="post__content">
       {{ content }}
-    </div>
-  </section>
+    </article>
+  </main>
 
   <footer class="nav nav--bottom">
     {% include nav.html %}
