@@ -1,27 +1,11 @@
-<!DOCTYPE html>
-<html>
-{% include head.html %}
+---
+layout: post
+---
 
-<body>
-  <div class="nav nav--top">
-    {% include nav.html %}
-  </div>
+<h1>{{page.title}}</h1>
 
-  <section class="post">
-    <div class="post__content">
-      <h1>{{page.title}}</h1>
+<p class="post__date">{{page.date | date: "%d %b %Y"}}</p>
 
-      <p class="post__date">{{page.date | date: "%d %b %Y"}}</p>
+{{content}}
 
-      {{content}}
-
-      {% include post-nav.html %}
-    </div>
-  </section>
-
-  <div class="nav nav--bottom">
-    {% include nav.html %}
-  </div>
-</body>
-
-</html>
+{% include post-nav.html %}

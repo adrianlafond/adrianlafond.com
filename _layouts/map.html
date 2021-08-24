@@ -1,48 +1,33 @@
-<!DOCTYPE html>
-<html>
-{% include head.html %}
+---
+layout: post
+---
 
-<body>
-  <div class="nav nav--top">
-    {% include nav.html %}
-  </div>
+<h1>index</h1>
 
-  <section class="post">
-    <div class="post__content">
-      <h1>index</h1>
+{% assign imgs = site.posts | where: "category", "img" %}
+{% assign notes = site.posts | where: "category", "note" %}
 
-      {% assign imgs = site.posts | where: "category", "img" %}
-      {% assign notes = site.posts | where: "category", "note" %}
+<h2>images</h2>
+<ul>
+  {% for post in imgs %}
+  <li>
+    <a href="{{ post.url }}">{{ post.title}}</a>
+  </li>
+  {% endfor %}
+</ul>
 
-      <h2>images</h2>
-      <ul>
-        {% for post in imgs %}
-          <li>
-            <a href="{{ post.url }}">{{ post.title}}</a>
-          </li>
-        {% endfor %}
-      </ul>
+<h2>notes</h2>
+<ul class="list">
+  {% for post in notes %}
+  <li>
+    <a href="{{ post.url }}">{{ post.title}}</a>
+  </li>
+  {% endfor %}
+</ul>
 
-      <h2>notes</h2>
-      <ul class="list">
-        {% for post in notes %}
-        <li>
-          <a href="{{ post.url }}">{{ post.title}}</a>
-        </li>
-        {% endfor %}
-      </ul>
-
-      <h2>subscribe</h2>
-      <ul class="list">
-        <li>
-          <a href="{{ site.url }}/feed.xml">RSS feed</a>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <div class="nav nav--bottom">
-    {% include nav.html %}
-  </div>
-</body>
-</html>
+<h2>subscribe</h2>
+<ul class="list">
+  <li>
+    <a href="{{ site.url }}/feed.xml">RSS feed</a>
+  </li>
+</ul>

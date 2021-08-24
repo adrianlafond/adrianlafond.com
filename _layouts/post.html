@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+
+<body>
+  <nav class="nav nav--top">
+    {% include nav.html %}
+  </nav>
+
+  <section class="post">
+    <div class="post__content">
+      {{ content }}
+    </div>
+  </section>
+
+  <footer class="nav nav--bottom">
+    {% include nav.html %}
+  </footer>
+</body>
+</html>
