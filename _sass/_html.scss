@@ -4,8 +4,8 @@ html, body {
 }
 body {
   font-family: Geneva,Calibri,Helvetica,Arial,sans-serif;
-  background-color: blue;
-  color: #fff;
+  background-color: $bgcolor;
+  color: $fgcolor;
   margin: 0;
 }
 * {
