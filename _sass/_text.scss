@@ -25,6 +25,13 @@ li, p, blockquote {
   font-size: 2.0rem;
 }
 
+li {
+  margin: 0 0 1rem;
+  &:last-child {
+    margin: 0;
+  }
+}
+
 p {
   line-height: 1.8;
 }
@@ -32,6 +39,9 @@ p {
 a {
   color: gold;
   text-decoration: none;
+  border-width: 0 0 2px;
+  border-color: gold;
+  border-style: solid;
 
   &:hover,
   &:focus {
