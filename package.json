@@ -19,7 +19,7 @@
   "homepage": "https://github.com/adrianlafond/adrianlafond.com#readme",
   "devDependencies": {
     "@babel/cli": "^7.1.2",
-    "@babel/core": "^7.1.2",
+    "@babel/core": "^7.20.7",
     "@babel/preset-env": "^7.1.0"
   }
 }
