@@ -1,11 +1,11 @@
 {
   "name": "adrianlafond.com",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "adrian's website",
   "main": "index.html",
   "scripts": {
-    "serve": "jekyll serve",
-    "babel": "babel es --out-dir js"
+    "deploy": "gh-pages -d .",
+    "serve": "live-server --no-browser --watch=./dist/ --entry-file=./index.html --port=4200"
   },
   "repository": {
     "type": "git",
@@ -18,8 +18,7 @@
   },
   "homepage": "https://github.com/adrianlafond/adrianlafond.com#readme",
   "devDependencies": {
-    "@babel/cli": "^7.1.2",
-    "@babel/core": "^7.1.2",
-    "@babel/preset-env": "^7.1.0"
+    "gh-pages": "^5.0.0",
+    "live-server": "^1.2.2"
   }
 }
