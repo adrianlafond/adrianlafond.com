@@ -6,29 +6,31 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>adrian lafond</title>
+  <title>adrian lafond: bugs</title>
 
   <link rel="stylesheet" href="/style/global.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/adrianlafond/bugs@1.7.0/dist/main.min.css" />
   <style>
-    html, body, main {
-      height: 100%;
-    }
-    main {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .site-nav {
+      width: var(--bugs-width);
     }
   </style>
 </head>
 
 <body>
   <main>
-    <nav class="site-nav">
-      <a href="/bugs">bugs</a>
-      <a href="/draw">figure drawings</a>
+    <div class="bugs__content"></div>
+    <div class="bugs__navigation">
+      <button class="bugs__btn bugs__btn-prev" aria-label="previous">&#8678;</button>
+      <button class="bugs__btn bugs__btn-next" aria-label="next">&#8680;</button>
+    </div>
+    <nav class="site-nav site-nav--dark">
+      <a href="/" target="_self">home</a>
       <a href="mailto:&#109;&#097;&#105;&#108;&#064;&#097;&#100;&#114;&#105;&#097;&#110;&#108;&#097;&#102;&#111;&#110;&#100;&#046;&#099;&#111;&#109;?subject=website"
         class="signature__link">&#109;&#097;&#105;&#108;&#064;&#097;&#100;&#114;&#105;&#097;&#110;&#108;&#097;&#102;&#111;&#110;&#100;&#046;&#099;&#111;&#109;</a>
     </nav>
   </main>
+
+  <script src="https://cdn.jsdelivr.net/gh/adrianlafond/bugs@1.7.0/dist/bugs.min.js"></script>
 </body>
 </html>
